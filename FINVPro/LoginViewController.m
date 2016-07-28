@@ -1,27 +1,31 @@
 //
-//  ViewController.m
+//  LoginViewController.m
 //  FINVPro
 //
-//  Created by Srinivas Bodhanampati on 7/12/16.
+//  Created by Srinivas Bodhanampati on 7/22/16.
 //  Copyright © 2016 Srinivas Bodhanampati. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 
-@interface ViewController ()
+@interface LoginViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Create your image
+    //_finvLogo.image = [UIImage imageNamed:@"free_logo.jpg"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

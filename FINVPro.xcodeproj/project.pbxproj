@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8232FEC1D426DB8003B8D39 /* free_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8232FEB1D426DB8003B8D39 /* free_logo.jpg */; };
+		B8232FEF1D427701003B8D39 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8232FEE1D427701003B8D39 /* LoginViewController.m */; };
+		B8232FF31D4277EE003B8D39 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8232FF21D4277EE003B8D39 /* SignUpViewController.m */; };
+		B8232FF51D427A04003B8D39 /* FINV.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8232FF41D427A04003B8D39 /* FINV.jpg */; };
+		B8232FF71D47B706003B8D39 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B8232FF61D47B706003B8D39 /* libsqlite3.tbd */; };
 		B8ED040D1D35780100EB7850 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED040C1D35780100EB7850 /* main.m */; };
 		B8ED04101D35780100EB7850 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED040F1D35780100EB7850 /* AppDelegate.m */; };
-		B8ED04131D35780100EB7850 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED04121D35780100EB7850 /* ViewController.m */; };
 		B8ED04161D35780100EB7850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ED04141D35780100EB7850 /* Main.storyboard */; };
 		B8ED04181D35780100EB7850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8ED04171D35780100EB7850 /* Assets.xcassets */; };
 		B8ED041B1D35780100EB7850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ED04191D35780100EB7850 /* LaunchScreen.storyboard */; };
@@ -17,12 +21,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8232FEB1D426DB8003B8D39 /* free_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = free_logo.jpg; path = ../../Images/free_logo.jpg; sourceTree = "<group>"; };
+		B8232FED1D427701003B8D39 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B8232FEE1D427701003B8D39 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B8232FF11D4277EE003B8D39 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		B8232FF21D4277EE003B8D39 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B8232FF41D427A04003B8D39 /* FINV.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FINV.jpg; path = ../../Images/FINV.jpg; sourceTree = "<group>"; };
+		B8232FF61D47B706003B8D39 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B8ED04081D35780100EB7850 /* FINVPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FINVPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ED040C1D35780100EB7850 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8ED040E1D35780100EB7850 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8ED040F1D35780100EB7850 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B8ED04111D35780100EB7850 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B8ED04121D35780100EB7850 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B8ED04151D35780100EB7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8ED04171D35780100EB7850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8ED041A1D35780100EB7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,15 +44,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8232FF71D47B706003B8D39 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8232FF01D4277B2003B8D39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B8232FED1D427701003B8D39 /* LoginViewController.h */,
+				B8232FEE1D427701003B8D39 /* LoginViewController.m */,
+				B8232FF11D4277EE003B8D39 /* SignUpViewController.h */,
+				B8232FF21D4277EE003B8D39 /* SignUpViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		B8ED03FF1D35780100EB7850 = {
 			isa = PBXGroup;
 			children = (
+				B8232FF61D47B706003B8D39 /* libsqlite3.tbd */,
 				B8ED040A1D35780100EB7850 /* FINVPro */,
 				B8ED04091D35780100EB7850 /* Products */,
 			);
@@ -62,14 +84,13 @@
 			children = (
 				B8ED040E1D35780100EB7850 /* AppDelegate.h */,
 				B8ED040F1D35780100EB7850 /* AppDelegate.m */,
-				B8ED04111D35780100EB7850 /* ViewController.h */,
-				B8ED04121D35780100EB7850 /* ViewController.m */,
 				B8ED04141D35780100EB7850 /* Main.storyboard */,
 				B8ED04171D35780100EB7850 /* Assets.xcassets */,
 				B8ED04221D357A3100EB7850 /* .gitignore */,
 				B8ED04191D35780100EB7850 /* LaunchScreen.storyboard */,
 				B8ED041C1D35780100EB7850 /* Info.plist */,
 				B8ED040B1D35780100EB7850 /* Supporting Files */,
+				B8232FF01D4277B2003B8D39 /* Controllers */,
 			);
 			path = FINVPro;
 			sourceTree = "<group>";
@@ -77,6 +98,8 @@
 		B8ED040B1D35780100EB7850 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8232FF41D427A04003B8D39 /* FINV.jpg */,
+				B8232FEB1D426DB8003B8D39 /* free_logo.jpg */,
 				B8ED040C1D35780100EB7850 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -139,7 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8232FEC1D426DB8003B8D39 /* free_logo.jpg in Resources */,
 				B8ED04231D357A3100EB7850 /* .gitignore in Resources */,
+				B8232FF51D427A04003B8D39 /* FINV.jpg in Resources */,
 				B8ED041B1D35780100EB7850 /* LaunchScreen.storyboard in Resources */,
 				B8ED04181D35780100EB7850 /* Assets.xcassets in Resources */,
 				B8ED04161D35780100EB7850 /* Main.storyboard in Resources */,
@@ -153,8 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8ED04131D35780100EB7850 /* ViewController.m in Sources */,
+				B8232FEF1D427701003B8D39 /* LoginViewController.m in Sources */,
 				B8ED04101D35780100EB7850 /* AppDelegate.m in Sources */,
+				B8232FF31D4277EE003B8D39 /* SignUpViewController.m in Sources */,
 				B8ED040D1D35780100EB7850 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +330,7 @@
 				B8ED04211D35780100EB7850 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
