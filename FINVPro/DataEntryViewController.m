@@ -10,7 +10,7 @@
 #import "LoginViewController.h"
 
 //Function returns a trimmed string for text passed as parameter
-NSString *trimmedText(NSString *textString) {
+NSString *trimmedTextData(NSString *textString) {
     NSString *trimmedString;
     return trimmedString = [textString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
@@ -48,30 +48,6 @@ NSString *trimmedText(NSString *textString) {
     
     //Build the path to the database
     _databasePath = [[NSString alloc] initWithString:[docsDir stringByAppendingPathComponent:@"finvpro.db"]];
-    //NSLog(@"Login Database Created at %@: ", _databasePath);
-    
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    
-    if ([fileMgr fileExistsAtPath:_databasePath] == NO) {
-        const char *dbPath = [_databasePath UTF8String];
-        
-        if (sqlite3_open(dbPath, &_DB) == SQLITE_OK) {
-            char *errorMessage;
-            //Create database table if it does not already exists
-            const char *sql_statement = "CREATE TABLE IF NOT EXISTS EXPENSES (expenseid INTEGER PRIMARY KEY AUTOINCREMENT, category TEXT, expenseamount DOUBLE, comment TEXT, expensedate DATE, userid INTEGER);";
-            
-            //check for database table creation result, if there is an error throw an alert (exception)
-            if (sqlite3_exec(_DB, sql_statement, NULL, NULL, &errorMessage) != SQLITE_OK) {
-                [self showUIAlertWithMessage:@"Failed to create the table" andTitle:@"Error"];
-            } else {
-                [self showUIAlertWithMessage:@"Created the table(s)" andTitle:@"Message"];
-            }
-            sqlite3_close(_DB);
-        }
-        else {
-            [self showUIAlertWithMessage:@"Failed to open/create the table" andTitle:@"Error"];
-        }
-    }
 }
 
 //Create alert messages on database error or successful completion
@@ -150,19 +126,19 @@ NSString *trimmedText(NSString *textString) {
 }
 
 - (IBAction)addTransactionToDB:(id)sender {
-    double expenseAmount = [_amountTF.text doubleValue];
+  //  double expenseAmount = [_amountTF.text doubleValue];
     
     [self selectPickerValue];
     NSLog(@"Selected: %@",pickerRowText);
     
     Expense *newExpense = [[Expense alloc] init];
-    newExpense.userID = _userIDTF.text;
+    newExpense.userID = _userIDFromLoginVC;
     newExpense.comment = _commentTF.text;
     newExpense.category = pickerRowText;
-    newExpense.amount = expenseAmount;
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    NSDate *dateConv = [formatter dateFromString:_currentDateTF.text];
-    newExpense.currentDate = dateConv;
+    newExpense.amount = _amountTF.text;
+ //   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+ //   NSDate *dateConv = [formatter dateFromString:_currentDateTF.text];
+    newExpense.currentDate = _currentDateTF.text;
 
     
     sqlite3_stmt *statement;
@@ -171,16 +147,17 @@ NSString *trimmedText(NSString *textString) {
     
     if (sqlite3_open(dbPath, &_DB) == SQLITE_OK) {
         
-            NSString *trimmedAmount = trimmedText(_amountTF.text);
+            NSString *trimmedAmount = trimmedTextData(_amountTF.text);
             
             if ([trimmedAmount isEqualToString:@""]) {
                 [self showUIAlertWithMessage:@"Please enter the amount" andTitle:@"Message"];
             }
             else {
-                NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO EXPENSES (category, expenseamount, comment, expensedate, userid) VALUES (\"%@\", \"%f\", \"%@\", \"%@\", \"%@\")", newExpense.category, newExpense.amount, newExpense.comment, newExpense.currentDate, newExpense.userID];
+                NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO EXPENSES (category, expenseamount, comment, expensedate, userid) VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%d\")", newExpense.category, newExpense.amount, newExpense.comment, newExpense.currentDate, newExpense.userID];
+                const char *errMsg;
                 
                 const char *insert_statement = [insertSQL UTF8String];
-                sqlite3_prepare_v2(_DB, insert_statement, -1, &statement, NULL);
+                sqlite3_prepare_v2(_DB, insert_statement, -1, &statement, &errMsg);
                 
                 //Show alert indicating user add to the database and clear out/reset all the text boxes to empty
                 if (sqlite3_step(statement) == SQLITE_DONE) {
@@ -191,11 +168,12 @@ NSString *trimmedText(NSString *textString) {
                 else {
                     //Throw error if user add to the database fails
                     [self showUIAlertWithMessage:@"Failed to add expense" andTitle:@"Error"];
+                    NSLog(@"Failed to insert record  msg=%s", sqlite3_errmsg(_DB));
                 }
-            }
         
         //Close database connection
         sqlite3_close(_DB);
-    }
+            }
+        }
 }
 @end

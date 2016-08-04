@@ -10,11 +10,13 @@
 
 @interface Expense : NSObject
 
-@property (strong, nonatomic) NSString *userID;
+@property int userID;
 @property (strong, nonatomic) NSString *comment;
 @property (strong, nonatomic) NSString *category;
+@property (strong, nonatomic) NSString *amount;
+@property (strong, nonatomic) NSString *currentDate;
 
-@property (strong, nonatomic) NSDate *currentDate;
-@property double amount;
+//@property (strong, nonatomic) NSDate *currentDate;
+//@property double amount;
 
 @end

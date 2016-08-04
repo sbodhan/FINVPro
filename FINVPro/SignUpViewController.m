@@ -53,7 +53,8 @@ NSString *getTrimmedText(NSString *textString) {
             char *errorMessage;
             //Create database table if it does not already exists
             const char *sql_statement = "CREATE TABLE IF NOT EXISTS USERS (userid INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT, lastname TEXT, email TEXT, username TEXT, password TEXT);"
-                                        "CREATE TABLE IF NOT EXISTS FINCATEGORY (fincatid INTEGER PRIMARY KEY AUTOINCREMENT, fincatname TEXT, userid INTEGER);";
+                                        "CREATE TABLE IF NOT EXISTS FINCATEGORY (fincatid INTEGER PRIMARY KEY AUTOINCREMENT, fincatname TEXT, userid INTEGER);"
+                                        "CREATE TABLE IF NOT EXISTS EXPENSES (expenseid INTEGER PRIMARY KEY AUTOINCREMENT, category TEXT, expenseamount TEXT, comment TEXT, expensedate TEXT, userid INTEGER);";
             
             //check for database table creation result, if there is an error throw an alert (exception)
             if (sqlite3_exec(_DB, sql_statement, NULL, NULL, &errorMessage) != SQLITE_OK) {
@@ -128,8 +129,6 @@ NSString *getTrimmedText(NSString *textString) {
                 //Once the "empty fields and duplicate username" checks are successful, insert the form data into the database
                 NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO USERS (firstname, lastname, email, username, password) VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\")", newUser.firstName, newUser.lastName, newUser.email, newUser.userName, newUser.password]; //Insert SQL based on form data
                 
-                NSLog(@"%@", insertSQL);
-                
                 const char *insert_statement = [insertSQL UTF8String];
                 sqlite3_prepare_v2(_DB, insert_statement, -1, &statement, NULL);
                 
@@ -141,6 +140,7 @@ NSString *getTrimmedText(NSString *textString) {
                     _emailTextField.text = @"";
                     _userNameTextField.text = @"";
                     _passwordTextField.text = @"";
+                 //   sqlite3_reset(insert_statement);
                 }
                 else {
                     //Throw error if user add to the database fails
@@ -153,6 +153,7 @@ NSString *getTrimmedText(NSString *textString) {
             [self showUIAlertWithMessage:@"Failed to search the database" andTitle:@"Error"];
         }
         //Close database connection
+        sqlite3_finalize(statement);
         sqlite3_close(_DB);
     }
 }

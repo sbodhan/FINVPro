@@ -98,9 +98,6 @@ NSString *trimmedText(NSString *textString) {
             else if (sqlite3_step(statement) == SQLITE_ROW) {
               //  [self showUIAlertWithMessage:@"Found a match" andTitle:@"Message"];
                 _userID = sqlite3_column_int(statement, 0);
-                
-             
-                
             }
             else {
                 [self showUIAlertWithMessage:@"Username/Password incorrect" andTitle:@"Message"];
@@ -111,6 +108,7 @@ NSString *trimmedText(NSString *textString) {
             [self showUIAlertWithMessage:@"Failed to search the database" andTitle:@"Error"];
         }
         //Close database connection
+        sqlite3_finalize(statement);
         sqlite3_close(_DB);
     }
 
