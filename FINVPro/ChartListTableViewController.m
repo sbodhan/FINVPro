@@ -14,12 +14,12 @@
 @end
 
 @implementation ChartListTableViewController
-NSArray *chartArray;
+//NSArray *chartArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    chartArray = @[@"LineChart",@"BarChart",@"CircleChart",@"PieChart",@"ScatterChart",@"RadarChart"];
+   // chartArray = @[@"LineChart",@"BarChart",@"CircleChart",@"PieChart",@"ScatterChart",@"RadarChart"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,7 +32,7 @@ NSArray *chartArray;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+/*
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,7 +48,7 @@ NSArray *chartArray;
     return cell;
 }
 
-
+*/
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
