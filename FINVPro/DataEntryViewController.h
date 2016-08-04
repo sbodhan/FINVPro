@@ -28,4 +28,7 @@
 
 - (IBAction)addTransactionToDB:(id)sender;
 
+- (IBAction)viewTransactions:(id)sender;
+
+
 @end
