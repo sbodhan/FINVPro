@@ -93,12 +93,12 @@
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnP-6o-wWT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnP-6o-wWT">
                                 <rect key="frame" x="39" y="166" width="265" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ScO-uY-pPN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ScO-uY-pPN">
                                 <rect key="frame" x="39" y="228" width="265" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -169,6 +169,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hpu-Tn-xxR">
+                        <barButtonItem key="leftBarButtonItem" title="View Transactions" id="jz7-Jw-wE8">
+                            <connections>
+                                <action selector="viewTransactions:" destination="fuL-0k-ryb" id="nUM-cv-1Of"/>
+                                <segue destination="LkR-2u-i8H" kind="push" id="9Mh-7U-CGM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="frK-V5-Gng">
                             <connections>
                                 <segue destination="tIB-or-htP" kind="unwind" unwindAction="prepareForUnwind:" id="zSa-KC-z0i"/>
@@ -187,6 +193,25 @@
                 <exit id="tIB-or-htP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1254" y="-262"/>
+        </scene>
+        <!--Data Chart View Controller-->
+        <scene sceneID="zRL-Uq-v2e">
+            <objects>
+                <viewController id="LkR-2u-i8H" customClass="DataChartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PhZ-ls-x4a"/>
+                        <viewControllerLayoutGuide type="bottom" id="nfC-FY-P5T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7nm-mC-eFP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RN7-1u-BEW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qmh-7z-qPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1723" y="-263"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="axL-Uc-1aY">
@@ -348,6 +373,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rFm-3M-uez"/>
+        <segue reference="rEq-iv-UPC"/>
     </inferredMetricsTieBreakers>
 </document>

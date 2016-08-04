@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86CF1B0584D16760CC7C85AA /* libPods-FINVPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9575474241436BEED900C3D4 /* libPods-FINVPro.a */; };
 		B8232FEC1D426DB8003B8D39 /* free_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8232FEB1D426DB8003B8D39 /* free_logo.jpg */; };
 		B8232FF31D4277EE003B8D39 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8232FF21D4277EE003B8D39 /* SignUpViewController.m */; };
 		B8232FF51D427A04003B8D39 /* FINV.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8232FF41D427A04003B8D39 /* FINV.jpg */; };
@@ -14,6 +15,7 @@
 		B8232FFA1D4A5A23003B8D39 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8232FF91D4A5A23003B8D39 /* User.m */; };
 		B8D42FDA1D50E34E00F901D1 /* DataEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D42FD91D50E34E00F901D1 /* DataEntryViewController.m */; };
 		B8D42FDD1D521EE100F901D1 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D42FDC1D521EE100F901D1 /* Expense.m */; };
+		B8D42FE01D538CC000F901D1 /* DataChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D42FDF1D538CC000F901D1 /* DataChartViewController.m */; };
 		B8DDE2AA1D4BC86900FE7876 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DDE2A91D4BC86900FE7876 /* LoginViewController.m */; };
 		B8ED040D1D35780100EB7850 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED040C1D35780100EB7850 /* main.m */; };
 		B8ED04101D35780100EB7850 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED040F1D35780100EB7850 /* AppDelegate.m */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15F96579DE5F087CFCEF07B8 /* Pods-FINVPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FINVPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FINVPro/Pods-FINVPro.debug.xcconfig"; sourceTree = "<group>"; };
+		353D5B896E1CD937AF455DD1 /* Pods-FINVPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FINVPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-FINVPro/Pods-FINVPro.release.xcconfig"; sourceTree = "<group>"; };
+		9575474241436BEED900C3D4 /* libPods-FINVPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FINVPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8232FEB1D426DB8003B8D39 /* free_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = free_logo.jpg; path = ../../Images/free_logo.jpg; sourceTree = "<group>"; };
 		B8232FF11D4277EE003B8D39 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B8232FF21D4277EE003B8D39 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
@@ -35,6 +40,8 @@
 		B8D42FD91D50E34E00F901D1 /* DataEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataEntryViewController.m; sourceTree = "<group>"; };
 		B8D42FDB1D521EE100F901D1 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
 		B8D42FDC1D521EE100F901D1 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
+		B8D42FDE1D538CC000F901D1 /* DataChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataChartViewController.h; sourceTree = "<group>"; };
+		B8D42FDF1D538CC000F901D1 /* DataChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataChartViewController.m; sourceTree = "<group>"; };
 		B8DDE2A81D4BC86900FE7876 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B8DDE2A91D4BC86900FE7876 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B8ED04081D35780100EB7850 /* FINVPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FINVPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,12 +61,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8232FF71D47B706003B8D39 /* libsqlite3.tbd in Frameworks */,
+				86CF1B0584D16760CC7C85AA /* libPods-FINVPro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FD3607A006E4921B94832D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15F96579DE5F087CFCEF07B8 /* Pods-FINVPro.debug.xcconfig */,
+				353D5B896E1CD937AF455DD1 /* Pods-FINVPro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92D7049E9FC8D04A8DC64124 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9575474241436BEED900C3D4 /* libPods-FINVPro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8232FF01D4277B2003B8D39 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +94,8 @@
 				B8DDE2A91D4BC86900FE7876 /* LoginViewController.m */,
 				B8D42FD81D50E34E00F901D1 /* DataEntryViewController.h */,
 				B8D42FD91D50E34E00F901D1 /* DataEntryViewController.m */,
+				B8D42FDE1D538CC000F901D1 /* DataChartViewController.h */,
+				B8D42FDF1D538CC000F901D1 /* DataChartViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +117,8 @@
 				B8232FF61D47B706003B8D39 /* libsqlite3.tbd */,
 				B8ED040A1D35780100EB7850 /* FINVPro */,
 				B8ED04091D35780100EB7850 /* Products */,
+				1FD3607A006E4921B94832D4 /* Pods */,
+				92D7049E9FC8D04A8DC64124 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8ED041F1D35780100EB7850 /* Build configuration list for PBXNativeTarget "FINVPro" */;
 			buildPhases = (
+				2C0B2903B52F2B170F09FBA1 /* [CP] Check Pods Manifest.lock */,
 				B8ED04041D35780100EB7850 /* Sources */,
 				B8ED04051D35780100EB7850 /* Frameworks */,
 				B8ED04061D35780100EB7850 /* Resources */,
+				E2A6975CB6E3DE3D90468A6D /* [CP] Embed Pods Frameworks */,
+				6115C81273CC9B9031A2277E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +228,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C0B2903B52F2B170F09FBA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6115C81273CC9B9031A2277E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FINVPro/Pods-FINVPro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2A6975CB6E3DE3D90468A6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FINVPro/Pods-FINVPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B8ED04041D35780100EB7850 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,6 +288,7 @@
 				B8D42FDD1D521EE100F901D1 /* Expense.m in Sources */,
 				B8ED040D1D35780100EB7850 /* main.m in Sources */,
 				B8DDE2AA1D4BC86900FE7876 /* LoginViewController.m in Sources */,
+				B8D42FE01D538CC000F901D1 /* DataChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +398,7 @@
 		};
 		B8ED04201D35780100EB7850 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15F96579DE5F087CFCEF07B8 /* Pods-FINVPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FINVPro/Info.plist;
@@ -328,6 +410,7 @@
 		};
 		B8ED04211D35780100EB7850 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 353D5B896E1CD937AF455DD1 /* Pods-FINVPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FINVPro/Info.plist;

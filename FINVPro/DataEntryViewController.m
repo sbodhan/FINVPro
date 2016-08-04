@@ -8,6 +8,7 @@
 
 #import "DataEntryViewController.h"
 #import "LoginViewController.h"
+#import "PNChart.h"
 
 //Function returns a trimmed string for text passed as parameter
 NSString *trimmedTextData(NSString *textString) {
@@ -76,7 +77,7 @@ NSString *trimmedTextData(NSString *textString) {
     //Set current date to date text field
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd/MM/yyyy"];
+    [dateFormat setDateFormat:@"MM/dd/yyyy"];
     NSString *dateString = [dateFormat stringFromDate:today];
     
     _currentDateTF.text = [NSString stringWithFormat:@"%@", dateString];
@@ -175,5 +176,8 @@ NSString *trimmedTextData(NSString *textString) {
         sqlite3_close(_DB);
             }
         }
+}
+
+- (IBAction)viewTransactions:(id)sender {
 }
 @end

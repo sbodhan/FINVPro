@@ -140,7 +140,6 @@ NSString *getTrimmedText(NSString *textString) {
                     _emailTextField.text = @"";
                     _userNameTextField.text = @"";
                     _passwordTextField.text = @"";
-                 //   sqlite3_reset(insert_statement);
                 }
                 else {
                     //Throw error if user add to the database fails
