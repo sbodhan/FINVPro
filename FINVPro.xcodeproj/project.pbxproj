@@ -16,10 +16,11 @@
 		B8D42FDA1D50E34E00F901D1 /* DataEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D42FD91D50E34E00F901D1 /* DataEntryViewController.m */; };
 		B8D42FDD1D521EE100F901D1 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D42FDC1D521EE100F901D1 /* Expense.m */; };
 		B8D42FE01D538CC000F901D1 /* DataChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D42FDF1D538CC000F901D1 /* DataChartViewController.m */; };
+		B8D42FE31D53A89C00F901D1 /* ChartListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D42FE21D53A89C00F901D1 /* ChartListTableViewController.m */; };
+		B8D42FE51D53B10200F901D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D42FE41D53B10200F901D1 /* Main.storyboard */; };
 		B8DDE2AA1D4BC86900FE7876 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DDE2A91D4BC86900FE7876 /* LoginViewController.m */; };
 		B8ED040D1D35780100EB7850 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED040C1D35780100EB7850 /* main.m */; };
 		B8ED04101D35780100EB7850 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ED040F1D35780100EB7850 /* AppDelegate.m */; };
-		B8ED04161D35780100EB7850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ED04141D35780100EB7850 /* Main.storyboard */; };
 		B8ED04181D35780100EB7850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8ED04171D35780100EB7850 /* Assets.xcassets */; };
 		B8ED041B1D35780100EB7850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ED04191D35780100EB7850 /* LaunchScreen.storyboard */; };
 		B8ED04231D357A3100EB7850 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B8ED04221D357A3100EB7850 /* .gitignore */; };
@@ -42,13 +43,15 @@
 		B8D42FDC1D521EE100F901D1 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
 		B8D42FDE1D538CC000F901D1 /* DataChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataChartViewController.h; sourceTree = "<group>"; };
 		B8D42FDF1D538CC000F901D1 /* DataChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataChartViewController.m; sourceTree = "<group>"; };
+		B8D42FE11D53A89C00F901D1 /* ChartListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartListTableViewController.h; sourceTree = "<group>"; };
+		B8D42FE21D53A89C00F901D1 /* ChartListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartListTableViewController.m; sourceTree = "<group>"; };
+		B8D42FE41D53B10200F901D1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B8DDE2A81D4BC86900FE7876 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B8DDE2A91D4BC86900FE7876 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B8ED04081D35780100EB7850 /* FINVPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FINVPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8ED040C1D35780100EB7850 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8ED040E1D35780100EB7850 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B8ED040F1D35780100EB7850 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B8ED04151D35780100EB7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8ED040F1D35780100EB7850 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B8ED04171D35780100EB7850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8ED041A1D35780100EB7850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8ED041C1D35780100EB7850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				B8D42FD91D50E34E00F901D1 /* DataEntryViewController.m */,
 				B8D42FDE1D538CC000F901D1 /* DataChartViewController.h */,
 				B8D42FDF1D538CC000F901D1 /* DataChartViewController.m */,
+				B8D42FE11D53A89C00F901D1 /* ChartListTableViewController.h */,
+				B8D42FE21D53A89C00F901D1 /* ChartListTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -135,7 +140,7 @@
 			children = (
 				B8ED040E1D35780100EB7850 /* AppDelegate.h */,
 				B8ED040F1D35780100EB7850 /* AppDelegate.m */,
-				B8ED04141D35780100EB7850 /* Main.storyboard */,
+				B8D42FE41D53B10200F901D1 /* Main.storyboard */,
 				B8ED04171D35780100EB7850 /* Assets.xcassets */,
 				B8ED04221D357A3100EB7850 /* .gitignore */,
 				B8ED04191D35780100EB7850 /* LaunchScreen.storyboard */,
@@ -220,9 +225,9 @@
 				B8232FEC1D426DB8003B8D39 /* free_logo.jpg in Resources */,
 				B8ED04231D357A3100EB7850 /* .gitignore in Resources */,
 				B8232FF51D427A04003B8D39 /* FINV.jpg in Resources */,
+				B8D42FE51D53B10200F901D1 /* Main.storyboard in Resources */,
 				B8ED041B1D35780100EB7850 /* LaunchScreen.storyboard in Resources */,
 				B8ED04181D35780100EB7850 /* Assets.xcassets in Resources */,
-				B8ED04161D35780100EB7850 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,20 +294,13 @@
 				B8ED040D1D35780100EB7850 /* main.m in Sources */,
 				B8DDE2AA1D4BC86900FE7876 /* LoginViewController.m in Sources */,
 				B8D42FE01D538CC000F901D1 /* DataChartViewController.m in Sources */,
+				B8D42FE31D53A89C00F901D1 /* ChartListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B8ED04141D35780100EB7850 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B8ED04151D35780100EB7850 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B8ED04191D35780100EB7850 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
