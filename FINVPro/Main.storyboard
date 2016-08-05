@@ -177,7 +177,7 @@
                         <barButtonItem key="leftBarButtonItem" title="View Transactions" id="jz7-Jw-wE8">
                             <connections>
                                 <action selector="viewTransactions:" destination="fuL-0k-ryb" id="nUM-cv-1Of"/>
-                                <segue destination="IzN-XP-T69" kind="push" id="4Ve-tr-C0Q"/>
+                                <segue destination="IzN-XP-T69" kind="push" identifier="chartSegue" id="4Ve-tr-C0Q"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="frK-V5-Gng">
@@ -207,11 +207,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dcA-wN-9El">
+                            <rect key="frame" x="0.0" y="335" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Return to Expenses"/>
+                            <connections>
+                                <segue destination="HNn-c2-eng" kind="unwind" unwindAction="prepareForUnwind:" id="tsc-CK-WXL"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection id="ANW-0W-93W">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="lineChart" rowHeight="51" id="cOt-KS-Y7a">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOt-KS-Y7a" id="TPA-V7-2iC">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="50.5"/>
@@ -225,13 +233,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.2227823012" green="1" blue="0.85521015899999997" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.9008241105" green="1" blue="0.97929944020000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="Qq6-lM-9O7" kind="push" identifier="lineChart" id="bSl-Cu-FQq"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="barChart" id="SUn-Dx-yYy">
-                                        <rect key="frame" x="0.0" y="51" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="115" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SUn-Dx-yYy" id="jUG-Gb-Nxo">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -245,13 +253,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.59277696960000004" green="1" blue="0.66841341899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.61205338819999999" green="0.77486910990000002" blue="0.6236442177" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="Qq6-lM-9O7" kind="push" identifier="barChart" id="pMO-FO-6qf"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="circleChart" id="LBY-4j-4aQ">
-                                        <rect key="frame" x="0.0" y="95" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="159" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBY-4j-4aQ" id="ITj-S0-zOL">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -265,13 +273,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.83902845820000005" blue="0.094368542789999996" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.9008241105" green="1" blue="0.97929944020000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="Qq6-lM-9O7" kind="push" identifier="circleChart" id="z9A-TY-uHD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="pieChart" id="SWG-gn-6LE">
-                                        <rect key="frame" x="0.0" y="139" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="203" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SWG-gn-6LE" id="RDO-Tw-jOA">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -285,13 +293,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.57577725349999997" blue="0.59459542899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.61205338819999999" green="0.77486910990000002" blue="0.6236442177" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="Qq6-lM-9O7" kind="push" identifier="pieChart" id="Ehm-4b-PiY"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scatterChart" id="viq-HM-wkc">
-                                        <rect key="frame" x="0.0" y="183" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="247" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="viq-HM-wkc" id="D3I-6S-SnA">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -305,13 +313,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.2122906366" green="0.74242555619999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.9008241105" green="1" blue="0.97929944020000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="Qq6-lM-9O7" kind="push" identifier="scatterChart" id="Xdu-Lo-xKq"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="radarChart" id="PAd-kd-z0p">
-                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="291" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAd-kd-z0p" id="heF-Sg-qss">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -325,7 +333,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.2455707067" green="0.86435138060000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.61205338819999999" green="0.77486910990000002" blue="0.6236442177" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="Qq6-lM-9O7" kind="push" identifier="radarChart" id="Gb7-sZ-yvq"/>
                                         </connections>
@@ -343,6 +351,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5d-lG-2hT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HNn-c2-eng" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1722" y="-262"/>
         </scene>
@@ -533,7 +542,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rFm-3M-uez"/>
+        <segue reference="rEq-iv-UPC"/>
         <segue reference="z9A-TY-uHD"/>
     </inferredMetricsTieBreakers>
 </document>

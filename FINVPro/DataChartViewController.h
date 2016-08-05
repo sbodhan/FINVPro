@@ -18,4 +18,6 @@
 @property (nonatomic) PNScatterChart *scatterChart;
 @property (nonatomic) PNRadarChart *radarChart;
 
+@property (strong, nonatomic) NSArray *categoryArray;
+
 @end

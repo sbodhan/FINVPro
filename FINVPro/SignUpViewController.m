@@ -119,11 +119,11 @@ NSString *getTrimmedText(NSString *textString) {
             NSString *trimmedPassword = getTrimmedText(_passwordTextField.text);
             
             if ([trimmedFirstName isEqualToString:@""] || [trimmedLastName isEqualToString:@""] || [trimmedEmail isEqualToString:@""] || [trimmedUserName isEqualToString:@""] || [trimmedPassword isEqualToString:@""]) {
-                [self showUIAlertWithMessage:@"Please complete the entire form" andTitle:@"Message"];
+                [self showUIAlertWithMessage:@"WAIT!!! Fill in the blanks[ALL]" andTitle:@"Message"];
             }
             //Username already exists in the database after below check returns a ROW from database, throw an alert.
             else if (sqlite3_step(statement) == SQLITE_ROW) {
-                [self showUIAlertWithMessage:@"Username already in database, please pick another" andTitle:@"Message"];
+                [self showUIAlertWithMessage:@"OOPS!!! Username taken, please pick another" andTitle:@"Message"];
             }
             else {
                 //Once the "empty fields and duplicate username" checks are successful, insert the form data into the database
@@ -134,7 +134,7 @@ NSString *getTrimmedText(NSString *textString) {
                 
                 //Show alert indicating user add to the database and clear out/reset all the text boxes to empty
                 if (sqlite3_step(statement) == SQLITE_DONE) {
-                    [self showUIAlertWithMessage:@"User added to the database" andTitle:@"Message"];
+                    [self showUIAlertWithMessage:@"Great, You are now all set to use FINVPro" andTitle:@"Message"];
                     _firstNameTextField.text = @"";
                     _lastNameTextField.text = @"";
                     _emailTextField.text = @"";
@@ -143,7 +143,7 @@ NSString *getTrimmedText(NSString *textString) {
                 }
                 else {
                     //Throw error if user add to the database fails
-                    [self showUIAlertWithMessage:@"Failed to add user" andTitle:@"Error"];
+                    [self showUIAlertWithMessage:@"BUMMER!!! We cannot setup your account at this time" andTitle:@"Error"];
                 }
             }
         }
