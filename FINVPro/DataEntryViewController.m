@@ -7,6 +7,7 @@
 //
 
 #import "DataEntryViewController.h"
+#import "ChartListTableViewController.h"
 #import "LoginViewController.h"
 #import "PNChart.h"
 
@@ -37,6 +38,10 @@ NSString *trimmedTextData(NSString *textString) {
     [self currentDayDate];
     [self controllerWelcomeTitle];
     [self categoryPickerArray];
+}
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+    
 }
 
 -(void)databaseSetup {
@@ -130,7 +135,7 @@ NSString *trimmedTextData(NSString *textString) {
   //  double expenseAmount = [_amountTF.text doubleValue];
     
     [self selectPickerValue];
-    NSLog(@"Selected: %@",pickerRowText);
+ //   NSLog(@"Selected: %@",pickerRowText);
     
     Expense *newExpense = [[Expense alloc] init];
     newExpense.userID = _userIDFromLoginVC;
@@ -162,14 +167,14 @@ NSString *trimmedTextData(NSString *textString) {
                 
                 //Show alert indicating user add to the database and clear out/reset all the text boxes to empty
                 if (sqlite3_step(statement) == SQLITE_DONE) {
-                    [self showUIAlertWithMessage:@"Expense added to the database" andTitle:@"Message"];
+                    [self showUIAlertWithMessage:@"You transaction has been saved!!!" andTitle:@"Message"];
                     _commentTF.text = @"";
                     _amountTF.text = @"";
                 }
                 else {
                     //Throw error if user add to the database fails
-                    [self showUIAlertWithMessage:@"Failed to add expense" andTitle:@"Error"];
-                    NSLog(@"Failed to insert record  msg=%s", sqlite3_errmsg(_DB));
+                    [self showUIAlertWithMessage:@"Failed to add transaction" andTitle:@"Error"];
+                 //   NSLog(@"Failed to insert record  msg=%s", sqlite3_errmsg(_DB));
                 }
         
         //Close database connection
@@ -180,4 +185,18 @@ NSString *trimmedTextData(NSString *textString) {
 
 - (IBAction)viewTransactions:(id)sender {
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"chartSegue"]) {
+        ChartListTableViewController *vc = [segue destinationViewController];
+        vc.userIDFromDataEntryVC = _userIDFromLoginVC;
+        vc.userNameFromDataEntry = _userNameFromLogin;
+        NSLog(@"Firing....");
+    }
+    else {
+        NSLog(@"Not working");
+    }
+}
+
 @end

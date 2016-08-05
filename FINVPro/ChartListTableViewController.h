@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
 @interface ChartListTableViewController : UITableViewController
+
+//Database properties
+@property(strong, nonatomic) NSString *databasePath;
+@property(nonatomic) sqlite3 *DB;
+
+@property int userIDFromDataEntryVC;
+@property (strong, nonatomic) NSString *userNameFromDataEntry;
+
+@property (strong, nonatomic) NSString *expenseCategory;
+@property (strong, nonatomic) NSString *amountPerCategory;
+@property (strong, nonatomic) NSMutableArray *dbUserDataArray;
 
 @end

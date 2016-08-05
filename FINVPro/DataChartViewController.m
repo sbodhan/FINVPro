@@ -225,12 +225,11 @@
     {
         self.title = @"Radar Chart";
         
-        NSArray *items = @[[PNRadarChartDataItem dataItemWithValue:3 description:@"Art"],
-                           [PNRadarChartDataItem dataItemWithValue:2 description:@"Math"],
-                           [PNRadarChartDataItem dataItemWithValue:8 description:@"Sports"],
-                           [PNRadarChartDataItem dataItemWithValue:5 description:@"Literature"],
-                           [PNRadarChartDataItem dataItemWithValue:4 description:@"Other"],
+        NSArray *items = @[[PNRadarChartDataItem dataItemWithValue:15 description:@"Eating Out"],
+                           [PNRadarChartDataItem dataItemWithValue:3 description:@"Groceries"],
+                           [PNRadarChartDataItem dataItemWithValue:57 description:@"Household"],
                            ];
+
         self.radarChart = [[PNRadarChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 300.0) items:items valueDivider:1];
         [self.radarChart strokeChart];
         
