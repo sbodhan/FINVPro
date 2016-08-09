@@ -29,7 +29,7 @@
         self.lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 200.0)];
         self.lineChart.yLabelFormat = @"%1.1f";
         self.lineChart.backgroundColor = [UIColor clearColor];
-        [self.lineChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5",@"SEP 6",@"SEP 7"]];
+        [self.lineChart setXLabels:@[@"Car",@"Clothing",@"Household",@"Eating Out",@"Groceries",@"Rent",@"Education"]];
         self.lineChart.showCoordinateAxis = YES;
         
         // added an examle to show how yGridLines can be enabled
@@ -43,20 +43,20 @@
         self.lineChart.yFixedValueMin = 0.0;
         
         [self.lineChart setYLabels:@[
-                                     @"0 min",
-                                     @"50 min",
-                                     @"100 min",
-                                     @"150 min",
-                                     @"200 min",
-                                     @"250 min",
-                                     @"300 min",
+                                     @"300",
+                                     @"100",
+                                     @"600",
+                                     @"50",
+                                     @"400",
+                                     @"800",
+                                     @"500",
                                      ]
          ];
         
         // Line Chart #1
         NSArray * data01Array = @[@60.1, @160.1, @126.4, @0.0, @186.2, @127.2, @176.2];
         PNLineChartData *data01 = [PNLineChartData new];
-        data01.dataTitle = @"Alpha";
+        data01.dataTitle = @"Category";
         data01.color = PNFreshGreen;
         data01.alpha = 0.3f;
         data01.itemCount = data01Array.count;
@@ -122,10 +122,10 @@
         
         self.barChart.labelMarginTop = 5.0;
         self.barChart.showChartBorder = YES;
-        [self.barChart setXLabels:@[@"2",@"3",@"4",@"5",@"2",@"3",@"4",@"5"]];
+        [self.barChart setXLabels:@[@"Car",@"Clothing",@"Household",@"Eating Out",@"Groceries",@"Rent",@"Education"]];
         //       self.barChart.yLabels = @[@-10,@0,@10];
         //        [self.barChart setYValues:@[@10000.0,@30000.0,@10000.0,@100000.0,@500000.0,@1000000.0,@1150000.0,@2150000.0]];
-        [self.barChart setYValues:@[@10.82,@1.88,@6.96,@33.93,@10.82,@1.88,@6.96,@33.93]];
+        [self.barChart setYValues:@[@300,@100,@600,@50,@400,@800,@500]];
         [self.barChart setStrokeColors:@[PNGreen,PNGreen,PNRed,PNGreen,PNGreen,PNGreen,PNRed,PNGreen]];
         self.barChart.isGradientShow = NO;
         self.barChart.isShowNumbers = NO;
@@ -159,9 +159,13 @@
         self.title = @"Pie Chart";
         
         
-        NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNLightGreen],
-                           [PNPieChartDataItem dataItemWithValue:20 color:PNFreshGreen description:@"WWDC"],
-                           [PNPieChartDataItem dataItemWithValue:40 color:PNDeepGreen description:@"GOOG I/O"],
+        NSArray *items = @[[PNPieChartDataItem dataItemWithValue:300 color:PNLightGreen description:@"Car"],
+                           [PNPieChartDataItem dataItemWithValue:100 color:PNFreshGreen description:@"Clothing"],
+                           [PNPieChartDataItem dataItemWithValue:600 color:PNDeepGreen description:@"Household"],
+                           [PNPieChartDataItem dataItemWithValue:50  color:PNLightGreen description:@"Eating Out"],
+                           [PNPieChartDataItem dataItemWithValue:400 color:PNFreshGreen description:@"Groceries"],
+                           [PNPieChartDataItem dataItemWithValue:800 color:PNDeepGreen description:@"Rent"],
+                           [PNPieChartDataItem dataItemWithValue:500 color:PNDeepGreen description:@"Education"],
                            ];
         
         self.pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(SCREEN_WIDTH /2.0 - 100, 135, 200.0, 200.0) items:items];
@@ -191,8 +195,14 @@
         //        self.scatterChart.yLabelFormat = @"xxx %1.1f";
         [self.scatterChart setAxisXWithMinimumValue:20 andMaxValue:100 toTicks:6];
         [self.scatterChart setAxisYWithMinimumValue:30 andMaxValue:50 toTicks:5];
-        [self.scatterChart setAxisXLabel:@[@"x1", @"x2", @"x3", @"x4", @"x5", @"x6"]];
-        [self.scatterChart setAxisYLabel:@[@"y1", @"y2", @"y3", @"y4", @"y5"]];
+        [self.scatterChart setAxisXLabel:@[@"Car",@"Clothing",@"Household",@"Eating Out",@"Groceries",@"Rent",@"Education"]];
+        [self.scatterChart setAxisYLabel:@[@"300",
+                                           @"100",
+                                           @"600",
+                                           @"50",
+                                           @"400",
+                                           @"800",
+                                           @"500"]];
         
         NSArray * data01Array = [self randomSetOfObjects];
         PNScatterChartData *data01 = [PNScatterChartData new];
@@ -225,9 +235,13 @@
     {
         self.title = @"Radar Chart";
         
-        NSArray *items = @[[PNRadarChartDataItem dataItemWithValue:15 description:@"Eating Out"],
-                           [PNRadarChartDataItem dataItemWithValue:3 description:@"Groceries"],
-                           [PNRadarChartDataItem dataItemWithValue:57 description:@"Household"],
+        NSArray *items = @[[PNRadarChartDataItem dataItemWithValue:300 description:@"Car"],
+                           [PNRadarChartDataItem dataItemWithValue:100 description:@"Clothing"],
+                           [PNRadarChartDataItem dataItemWithValue:600 description:@"Household"],
+                           [PNRadarChartDataItem dataItemWithValue:50 description:@"Eating Out"],
+                           [PNRadarChartDataItem dataItemWithValue:400 description:@"Groceries"],
+                           [PNRadarChartDataItem dataItemWithValue:800 description:@"Rent"],
+                           [PNRadarChartDataItem dataItemWithValue:500 description:@"Education"],
                            ];
 
         self.radarChart = [[PNRadarChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 300.0) items:items valueDivider:1];

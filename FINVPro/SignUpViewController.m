@@ -25,7 +25,7 @@ NSString *getTrimmedText(NSString *textString) {
     self.navigationController.navigationBar.tintColor = [UIColor redColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor blueColor]};
     
-    self.title = @"FINVPro SignUp";
+    self.title = @"FINVPro";
     
     [self createUserTable];
 
